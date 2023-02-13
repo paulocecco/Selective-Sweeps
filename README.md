@@ -38,7 +38,8 @@ To use the scripts, you need to provide the following inputs:
 * A **.map** file obtained from **plink** (https://www.cog-genomics.org/plink/)
 
 Here's a quick example of the workflow
-![Uploading Example.png…]()
+![Example](https://user-images.githubusercontent.com/43005715/218570525-d0a224c9-4a77-4ea6-8027-22d14b61c884.png)
+
 
 
 ## Methods
