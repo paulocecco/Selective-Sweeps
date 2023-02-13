@@ -5,6 +5,8 @@ A selective sweep is a rapid evolution process in which a beneficial mutation sp
 
 This repository contains scripts and tools for performing selective sweep analysis using R. The goal is to provide an easy-to-use and efficient way to detect selective sweeps in genomic data.
 
+All data in this repository has been published in https://onlinelibrary.wiley.com/doi/abs/10.1111/jbg.12733
+
 ## Installation
 You'll need to install SHAPEIT software (https://mathgen.stats.ox.ac.uk/genetics_software/shapeit/shapeit.html#citations). The output of this program **.PHASED** files are going to be the input for the following workflow. Please also read OutFLANK repository (https://github.com/whitlock/OutFLANK) since it's the one we are going to use.
 
