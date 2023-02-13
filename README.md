@@ -25,6 +25,6 @@ lapply(list.of.packages, library, character.only = TRUE)}
 ##Usage
 To use the scripts, you need to provide the following inputs:
 
-* A VCF file containing variant information for multiple individuals
-* A tab-delimited file containing phenotypic information for each individual
-* The following is an example of how to use the scripts:
+* A **.PHASED** file which is the output from **SHAPEIT**
+* One file per each chromosome
+* A **.map** file obtained from **plink** (https://www.cog-genomics.org/plink/)
