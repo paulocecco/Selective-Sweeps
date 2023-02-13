@@ -6,7 +6,7 @@ A selective sweep is a rapid evolution process in which a beneficial mutation sp
 This repository contains scripts and tools for performing selective sweep analysis using R. The goal is to provide an easy-to-use and efficient way to detect selective sweeps in genomic data.
 
 ## Installation
-You'll need to install SHAPEIT software (https://mathgen.stats.ox.ac.uk/genetics_software/shapeit/shapeit.html#citations). The output of this program **.PHASED** files are going to be the input for the following workflow
+You'll need to install SHAPEIT software (https://mathgen.stats.ox.ac.uk/genetics_software/shapeit/shapeit.html#citations). The output of this program **.PHASED** files are going to be the input for the following workflow. Please also read OutFLANK repository (https://github.com/whitlock/OutFLANK) since it's the one we are going to use.
 
 The scripts in this repository require the following R packages:
 * dplyr
@@ -41,4 +41,10 @@ In this script we are going to use two different approches for selective sweeps 
 1. Population differentiation: **FST**
 2. Linkage of desequilibrum: estimation of extent haplotype homozygous **Rsb** and **XPEHH**
 
-For the first one we are going to use the **Outflank** (https://github.com/whitlock/OutFLANK) package while **rehh** is going to be used for the second one.
+For the first one we are going to use the **Outflank** package while **rehh** is going to be used for the second one.
+
+## Contributing
+We welcome contributions to this repository. If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
+
+## License
+The code in this repository is available under the MIT License.
