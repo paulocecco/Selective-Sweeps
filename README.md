@@ -28,3 +28,8 @@ To use the scripts, you need to provide the following inputs:
 * A **.PHASED** file which is the output from **SHAPEIT**
 * One file per each chromosome
 * A **.map** file obtained from **plink** (https://www.cog-genomics.org/plink/)
+
+## Methods
+In this script we are going to use two different approches for slective sweeps estimations.
+1. Population differentiation: **FST**
+2. Linkage of desequilibrum: estimation of haplotype homozygous **Rsb** and **XPEHH**
