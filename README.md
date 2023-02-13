@@ -30,6 +30,6 @@ To use the scripts, you need to provide the following inputs:
 * A **.map** file obtained from **plink** (https://www.cog-genomics.org/plink/)
 
 ## Methods
-In this script we are going to use two different approches for slective sweeps estimations.
+In this script we are going to use two different approches for selective sweeps estimations.
 1. Population differentiation: **FST**
 2. Linkage of desequilibrum: estimation of haplotype homozygous **Rsb** and **XPEHH**
