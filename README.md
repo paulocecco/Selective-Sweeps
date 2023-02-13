@@ -24,7 +24,8 @@ For quick installation
 #Install packages + Loading Wrapping
 {list.of.packages <- c("dplyr", "rehh", "ggplot2", "qvalue", "OutFLANK", "vcfR", "bigsnpr", "qqman", "stringr")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-if(length(new.packages)) install.packages(new.packages)
+if(length(new.packages![Example](https://user-images.githubusercontent.com/43005715/218570374-0effe179-6276-4b62-bbd0-0b218584b5cd.png)
+)) install.packages(new.packages)
 lapply(list.of.packages, library, character.only = TRUE)}
 ```
 
@@ -35,6 +36,10 @@ To use the scripts, you need to provide the following inputs:
 * A **.PHASED** file which is the output from **SHAPEIT**
 * One file per each chromosome
 * A **.map** file obtained from **plink** (https://www.cog-genomics.org/plink/)
+
+Here's a quick example of the workflow
+![Uploading Example.png…]()
+
 
 ## Methods
 In this script we are going to use two different approches for selective sweeps estimations.
