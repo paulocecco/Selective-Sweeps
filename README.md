@@ -14,7 +14,7 @@ The scripts in this repository require the following R packages:
 * ggplot2
 
 For quick installation
-```{r}
+```{r, echo = FALSE}
 #Install packages + Loading Wrapping
 {list.of.packages <- c("dplyr", "rehh", "ggplot2")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
