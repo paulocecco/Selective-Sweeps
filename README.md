@@ -9,9 +9,9 @@ This repository contains scripts and tools for performing selective sweep analys
 You'll need to install SHAPEIT software (https://mathgen.stats.ox.ac.uk/genetics_software/shapeit/shapeit.html#citations). The output of this program **.PHASED** files are going to be the input for the following workflow
 
 The scripts in this repository require the following R packages:
-*dplyr
-*rehh
-*ggplot2
+* dplyr
+* rehh
+* ggplot2
 
 For quick installation
 ```
@@ -25,6 +25,6 @@ lapply(list.of.packages, library, character.only = TRUE)}
 ##Usage
 To use the scripts, you need to provide the following inputs:
 
-*A VCF file containing variant information for multiple individuals
-*A tab-delimited file containing phenotypic information for each individual
-*The following is an example of how to use the scripts:
+* A VCF file containing variant information for multiple individuals
+* A tab-delimited file containing phenotypic information for each individual
+* The following is an example of how to use the scripts:
