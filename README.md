@@ -12,11 +12,17 @@ The scripts in this repository require the following R packages:
 * dplyr
 * rehh
 * ggplot2
+* qvalue
+* vcfR
+* OutFLANK
+* bigsnpr
+* qqman
+* stringr
 
 For quick installation
 ```{r, echo = FALSE}
 #Install packages + Loading Wrapping
-{list.of.packages <- c("dplyr", "rehh", "ggplot2")
+{list.of.packages <- c("dplyr", "rehh", "ggplot2", "qvalue", "OutFLANK", "vcfR", "bigsnpr", "qqman", "stringr")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 lapply(list.of.packages, library, character.only = TRUE)}
@@ -25,6 +31,7 @@ lapply(list.of.packages, library, character.only = TRUE)}
 ## Usage
 To use the scripts, you need to provide the following inputs:
 
+* A **vcf** file containing variant information for multiple individuals
 * A **.PHASED** file which is the output from **SHAPEIT**
 * One file per each chromosome
 * A **.map** file obtained from **plink** (https://www.cog-genomics.org/plink/)
@@ -32,4 +39,6 @@ To use the scripts, you need to provide the following inputs:
 ## Methods
 In this script we are going to use two different approches for selective sweeps estimations.
 1. Population differentiation: **FST**
-2. Linkage of desequilibrum: estimation of haplotype homozygous **Rsb** and **XPEHH**
+2. Linkage of desequilibrum: estimation of extent haplotype homozygous **Rsb** and **XPEHH**
+
+For the first one we are going to use the **Outflank** (https://github.com/whitlock/OutFLANK) package while **rehh** is going to be used for the second one.
