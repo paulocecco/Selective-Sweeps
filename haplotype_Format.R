@@ -8,17 +8,13 @@
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 lapply(list.of.packages, library, character.only = TRUE)}
-#source("../rehh_patches.R")
 
-#############################################################
-#
-# Rsb CALCULATIONS
-#
+# Haplotype formating
 #############################################################
 
 #Name the populations after the name files
-popname1 <- "HoLo"
-popname2 <- "LoHo"
+popname1 <- "Pop1"
+popname2 <- "Pop2"
 
 {for (i in seq(1,29)){
   haps1 <- read.table(paste0(popname1,"-chr",i,".PHASED.haps"), stringsAsFactors = FALSE)
@@ -26,7 +22,7 @@ popname2 <- "LoHo"
   haps2 <- read.table(paste0(popname2,"-chr",i,".PHASED.haps"), stringsAsFactors = FALSE)
   sample2 <- read.table(paste0(popname2,"-chr",i,".PHASED.sample"), stringsAsFactors = FALSE)
   
-############################################
+
 # 1) POPULATION I CALCULATIONS
 ############################################
 
@@ -35,8 +31,6 @@ popname2 <- "LoHo"
   # Count frequencies of haps1 (0,1) by row and convert to matrix
   #View(haps1[,-(1:5)])
   count_frq <- apply(haps1[,-(1:5)], 1, function(x) { table(factor(x, levels=0:1)) })
-  # Column 1 = 0
-  # Column 2 = 1
   tr_freq <- t(as.data.frame(count_frq))
   
   # Sum frequencies for each allele by row (SNP)
@@ -145,7 +139,7 @@ popname2 <- "LoHo"
   #ihsplot_mod(ihs1, plot.pval = TRUE, ylim.scan=2, main = ihsTitleName1)
   #dev.off()
 
-############################################
+
 # 2) POPULATION II CALCULATIONS
 ############################################
   
