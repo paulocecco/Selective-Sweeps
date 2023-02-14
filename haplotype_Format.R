@@ -1,5 +1,7 @@
 #Input files: .PHASED from SHAPEIT
 #Output files: -hap.txt and -map.txt
+#Recomendation: The input files may contain the population name at the beggining, followed by the chromosome number, and then the SHAPEIT extention. 
+#For instance, population A is Air and population B is Fire then popA file name should be named as: Air-chr1.PHASED.sample
 
 #Install packages + Loading Wrapping
 {list.of.packages <- c("dplyr", "rehh", "ggplot2")
