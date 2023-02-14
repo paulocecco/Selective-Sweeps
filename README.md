@@ -22,12 +22,11 @@ The scripts in this repository require the following R packages:
 * stringr
 
 For quick installation
-```{r, echo = FALSE}
+```{r}
 #Install packages + Loading Wrapping
 {list.of.packages <- c("dplyr", "rehh", "ggplot2", "qvalue", "OutFLANK", "vcfR", "bigsnpr", "qqman", "stringr")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-if(length(new.packages![Example](https://user-images.githubusercontent.com/43005715/218570374-0effe179-6276-4b62-bbd0-0b218584b5cd.png)
-)) install.packages(new.packages)
+if(length(new.packages)) install.packages(new.packages)
 lapply(list.of.packages, library, character.only = TRUE)}
 ```
 
