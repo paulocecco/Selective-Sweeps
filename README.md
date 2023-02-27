@@ -57,19 +57,41 @@ In this script we are going to use two different approches for selective sweeps 
 
 For the first one we are going to use the **Outflank** package while **rehh** is going to be used for the second one.
 
-# Step-by-step Guide
+## Step-by-step Guide
 - [Plink](#plink)
 - [ShapeIT](#shapeit)
 - [OUTFLANK](#outflank)
 - [rEHH](#rehh)
 
-## Plink
+### Plink
+plink it's used for 4 things
+1. Creating **.bed** **.vcf** extention files needed for ShapeIT and OUTFLANK softwares.
+2. Split population by family tag using **.fam** file.
+3. Filtering data by genotype (**--geno**) and minimum allele frequency (**--maf**), required for rEHH.
+4. Chromosome splitting, needed for ShapeIT.
 
-## ShapeIT
+#### 1. Extention
+Using **.bed** file extention is recommended since **.fam** file is created 
+```
+#From .ped to .bed
+#--cow flag is used since data is from cattle data
+plink2 --file InputFile --Out BedFile --make-bed --cow 
+```
+Afterwards **.vcf** file is created
+```
+#Using .bed to create .vcf
+plink2 --bfile BedFile --out VCFFile --recode vcf --cow
+```
 
-## OUTFLANK
+#### 2. Filtering by genotype and MAF
 
-## rEHH
+#### 3. Chromosome splitting
+
+### ShapeIT
+
+### OUTFLANK
+
+### rEHH
 
 ## Contributing
 We welcome contributions to this repository. If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
