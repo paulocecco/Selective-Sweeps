@@ -7,6 +7,14 @@ This repository contains scripts and tools for performing selective sweep analys
 
 All data in this repository has been published in https://onlinelibrary.wiley.com/doi/abs/10.1111/jbg.12733
 
+# Index
+- [Installation](#installation)
+- [Usage](#usage)
+- [Methods](#methods)
+- [Guide](#guide)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Installation
 You'll need to install SHAPEIT software (https://mathgen.stats.ox.ac.uk/genetics_software/shapeit/shapeit.html#citations). The output of this program **.PHASED** files are going to be the input for the following workflow. Please also read OutFLANK repository (https://github.com/whitlock/OutFLANK) since it's the one we are going to use.
 
@@ -42,13 +50,14 @@ Here's a quick example of the workflow
 ![Example](https://user-images.githubusercontent.com/43005715/218570525-d0a224c9-4a77-4ea6-8027-22d14b61c884.png)
 
 
-
 ## Methods
 In this script we are going to use two different approches for selective sweeps estimations.
 1. Population differentiation: **FST**
 2. Linkage of desequilibrum: estimation of extent haplotype homozygous **Rsb** and **XPEHH**
 
 For the first one we are going to use the **Outflank** package while **rehh** is going to be used for the second one.
+
+## Guide
 
 ## Contributing
 We welcome contributions to this repository. If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
