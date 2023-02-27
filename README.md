@@ -57,7 +57,19 @@ In this script we are going to use two different approches for selective sweeps 
 
 For the first one we are going to use the **Outflank** package while **rehh** is going to be used for the second one.
 
-## Guide
+# Step-by-step Guide
+- [Plink](#plink)
+- [ShapeIT](#shapeit)
+- [OUTFLANK](#outflank)
+- [rEHH](#rehh)
+
+## Plink
+
+## ShapeIT
+
+## OUTFLANK
+
+## rEHH
 
 ## Contributing
 We welcome contributions to this repository. If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
