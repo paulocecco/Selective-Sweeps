@@ -96,7 +96,7 @@ for i in $(seq 1 29); do plink2 --bfile FilterFile --out FinalFile-BTA$i --chr $
 ```
 
 ### ShapeIT
-See [runshapeIT.sh](Selective-Sweeps/SHAPEIT/T)
+See [runshapeIT.sh](Selective-Sweeps/SHAPEIT)
 
 ### OUTFLANK
 
