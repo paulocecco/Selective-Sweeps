@@ -99,6 +99,9 @@ for i in $(seq 1 29); do plink2 --bfile FilterFile --out FinalFile-BTA$i --chr $
 See [runshapeIT.sh](https://github.com/paulocecco/Selective-Sweeps/tree/main/SHAPEIT)
 
 ### OUTFLANK
+OutFLANK is used to estimate FST with efective size population correction. In contrast to the classical REYNOLDS, WEIR, and COCKERHAM FST estimation which has the general assumption that all population has the same effective size, this could lead to miss estimations such as outliers or even negative values of the estimator. OUTFLANK uses population size correction to estimate FST in a more acurate and precised way.
+To run the script you must have a **vcf** file obtained from plink. The output it's going to be a csv file with the SNPs obtained and 4 columns named: CHR (Chromosome), POSITION, SNP (marker name), FST (weir Cockerham estimation), FSTNoCorr (OUTFLANK correction) and pvaluesRightTail (significant SNPs p < 0.01)
+For script see 
 
 ### rEHH
 
