@@ -77,7 +77,7 @@ Using **.bed** file extention is recommended since **.fam** file is created
 #--cow flag is used since data is from cattle data
 plink2 --file InputFile --Out BedFile --make-bed --cow 
 ```
-Afterwards **.vcf** file is created
+Afterwards **.vcf** file is created, needed for OutFLANK
 ```
 #Using .bed to create .vcf
 plink2 --bfile BedFile --out VCFFile --recode vcf --cow
