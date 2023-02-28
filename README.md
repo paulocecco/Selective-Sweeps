@@ -84,8 +84,18 @@ plink2 --bfile BedFile --out VCFFile --recode vcf --cow
 ```
 
 #### 2. Filtering by genotype and MAF
+Only 95% of genotype SNPs and those ones with a minimum allele frequency of 99% are kept
+```
+#Filter bed file using --geno and --maf flags
+plink2 --bfile BedFile --out FilterFile --geno 0.05 --maf 0.01 --make-bed --cow
+```
 
 #### 3. Chromosome splitting
+Split the FilterFile into chromosomes. As Bos taurus has 29 chromosomes, the seq(1 29) is used; if using any other organism you may change the final number of **seq**
+```
+#Splitting Chromosomes
+for i in $(seq 1 29); do plink2 --bfile FilterFile --out FinalFile-CHR$i --chr $i --cow --make-bed; done
+```
 
 ### ShapeIT
 
