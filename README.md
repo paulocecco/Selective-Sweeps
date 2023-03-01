@@ -62,7 +62,7 @@ For the first one we are going to use the **Outflank** package while **rehh** is
 - [ShapeIT](#shapeit)
 - [OUTFLANK](#outflank)
 - [rEHH](#rehh)
-- [Manhattan Plot](#manhattan plot)
+- [Manhattan Plot](#manhattan%20plot)
 
 ### Plink
 plink it's used for 4 things
