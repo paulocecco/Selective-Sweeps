@@ -110,7 +110,7 @@ For script see
 ### rEHH
 Extended Homozygous Haplotype (EHH) is an estimation of the area under the curve of the haplotype extention. In this repository only Rsb and XP-EHH are listed. The differences between them are subtle. While Rsb is used to reveal recent haplotype formation between populations, the cross population (XP) can reveal more ancient selective sweeps. You can see all documentation in the paper posted by Gautier, et. al 2017 (https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.12634) and his repository at https://cran.r-project.org/web/packages/rehh/index.html for more information.
 
-For this script you'll need **.PHASED.sample** and **.PHASED.haps** files from *SHAPEIT* as input. A csv file with the top 1% of the markers, is going to be created. The script is divided into two different parts. First, the [haplotype_format](https://github.com/paulocecco/Selective-Sweeps/blob/main/rEHH/haplotype_Format.R) script that it's going to create an **hap.txt** and a **scanhh.txt** files. This files are going to be the input for the calculations listed in [rEHH calculations](https://github.com/paulocecco/Selective-Sweeps/blob/main/rEHH/rEHH_calc.R).
+For this script you'll need **.PHASED.sample** and **.PHASED.haps** files from *SHAPEIT* as input. A csv file with the top 1% of the markers, is going to be created. The script is divided into two different parts. First, the [haplotype format](https://github.com/paulocecco/Selective-Sweeps/blob/main/rEHH/haplotype_Format.R) script that it's going to create an **hap.txt** and a **scanhh.txt** files. This files are going to be the input for the calculations listed in [rEHH calculations](https://github.com/paulocecco/Selective-Sweeps/blob/main/rEHH/rEHH_calc.R).
 
 ### Manhattan Plot
 
