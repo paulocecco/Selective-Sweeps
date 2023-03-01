@@ -62,6 +62,7 @@ For the first one we are going to use the **Outflank** package while **rehh** is
 - [ShapeIT](#shapeit)
 - [OUTFLANK](#outflank)
 - [rEHH](#rehh)
+- [Manhattan Plot](#manhattan plot)
 
 ### Plink
 plink it's used for 4 things
@@ -96,14 +97,23 @@ for i in $(seq 1 29); do plink2 --bfile FilterFile --out FinalFile-BTA$i --chr $
 ```
 
 ### ShapeIT
+SHAPEIT will require a bed file extention as input. To run the following script you'll need to create a directory where you have all the bed files. In this same directory it's recomended to have the script saved. SHAPEIT will create a new directory which is going to contain all the **PHASED** output files.
+
 See [runshapeIT.sh](https://github.com/paulocecco/Selective-Sweeps/tree/main/SHAPEIT)
 
 ### OUTFLANK
 OutFLANK is used to estimate FST with efective size population correction. In contrast to the classical REYNOLDS, WEIR, and COCKERHAM FST estimation which has the general assumption that all population has the same effective size, this could lead to miss estimations such as outliers or even negative values of the estimator. OUTFLANK uses population size correction to estimate FST in a more acurate and precised way.
+
 To run the script you must have a **vcf** file obtained from plink. The output it's going to be a csv file with the SNPs obtained and 4 columns named: CHR (Chromosome), POSITION, SNP (marker name), FST (weir Cockerham estimation), FSTNoCorr (OUTFLANK correction) and pvaluesRightTail (significant SNPs p < 0.01)
 For script see 
 
 ### rEHH
+Extended Homozygous Haplotype (EHH) is an estimation of the area under the curve of the haplotype extention. In this repository only Rsb and XP-EHH are listed. The differences between them are subtle. While Rsb is used to reveal recent haplotype formation between populations, the cross population (XP) can reveal more ancient selective sweeps. You can see all documentation in the paper posted by Gautier, et. al 2017 (https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.12634) and his repository at https://cran.r-project.org/web/packages/rehh/index.html for more information.
+
+For this script you'll need **.PHASED.sample** and **.PHASED.haps** files from *SHAPEIT* as input. A csv file with all significant SNPs (p < 0.01) is going to be created. The script is divided into two different parts. First, the [haplotype_format](https://github.com/paulocecco/Selective-Sweeps/blob/main/rEHH/haplotype_Format.R) script that it's going to create an **hap.txt** and a **scanhh.txt** files. This files are going to be the input for the calculations listed in [LD_selectionsignatures](https://github.com/paulocecco/Selective-Sweeps/blob/main/rEHH/Manhattan%20Plots.R).
+
+### Manhatan Plot
+
 
 ## Contributing
 We welcome contributions to this repository. If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
