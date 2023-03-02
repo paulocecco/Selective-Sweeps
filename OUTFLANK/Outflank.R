@@ -112,33 +112,3 @@ df.export.Prunn <- df.export.Prunn[order(-df.export.Prunn$FSTNoCorr, df.export.P
 df.export.Prunn.1p <- df.export.Prunn[df.export.Prunn$pvaluesRightTail<0.01,]
 #Export into csv
 write.csv(df.export.Prunn.1p,paste0(vcf.filename,"-OUTFLANK.csv"),row.names = F)
-
-##############################
-### Manhattan Plot
-##############################
-
-#Genome Lines
-MeanLine <- mean(df.export.Prunn$FSTNoCorr)
-GenLine <- 0.01
-
-if (vcf.filename == "Angus"){
-  pallete <- c("#F8766D", "#7CAE00")
-}  else if (vcf.filename == "Brahman"){
-    pallete <- c("#00BFC4", "#7CAE00")
-}  else if (vcf.filename == "HiLo"){
-  pallete <- c("#d84d00", "#00d8ac")
-}  else if (vcf.filename == "HoLo"){
-  pallete <- c("#0028d8", "#00d8ac")
-}  else if (vcf.filename == "HiHo"){
-  pallete <- c("#d84d00", "#0028d8")
-}  else {
-  pallete <- c("#6c6960", "#403a3a")
-}        
-
-png(paste0(vcf.filename,"-Rtail.png"),width = 1366,height = 745)
-manhattan(df.export.Prunn, chr="CHR", bp="POSITION", snp="POSITION",  p="pvaluesRightTail",
-            suggestiveline = -log10(MeanLine),
-            genomewideline = -log10(GenLine),
-            col = pallete)
-dev.off()
-print(paste0("File name: ",vcf.filename," done Succesfully!"))
