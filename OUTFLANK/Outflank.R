@@ -111,7 +111,7 @@ df.export.Prunn <- na.omit(df.export.Prunn)
 df.export.Prunn <- df.export.Prunn[order(-df.export.Prunn$FSTNoCorr, df.export.Prunn$pvaluesRightTail),]
 df.export.Prunn.1p <- df.export.Prunn[df.export.Prunn$pvaluesRightTail<0.01,]
 #Export into csv
-write.csv(df.export.Prunn.1p,paste0(vcf.filename,"-FST.csv"),row.names = F)
+write.csv(df.export.Prunn.1p,paste0(vcf.filename,"-OUTFLANK.csv"),row.names = F)
 
 ##############################
 ### Manhattan Plot
