@@ -113,7 +113,7 @@ Extended Homozygous Haplotype (EHH) is an estimation of the area under the curve
 For this script you'll need **.PHASED.sample** and **.PHASED.haps** files from *SHAPEIT* as input. A csv file with the top 1% of the markers, is going to be created. The script is divided into two different parts. First, the [haplotype format](https://github.com/paulocecco/Selective-Sweeps/blob/main/rEHH/haplotype_Format.R) script that it's going to create an **hap.txt** and a **scanhh.txt** files. This files are going to be the input for the calculations listed in [rEHH calculations](https://github.com/paulocecco/Selective-Sweeps/blob/main/rEHH/rEHH_calc.R).
 
 ### Manhattan Plot
-
+Both OutFLANK and rEHH packages have their own manhattan plot functions. I recommend you look at documentation. However I'll put the code I used for manhattan plots.
 
 ## Contributing
 We welcome contributions to this repository. If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
